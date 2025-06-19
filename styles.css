@@ -1,14 +1,14 @@
-/* styles.css */
+/* Peak Flex - Classic Bootstrap Styles */
 
-/* Font */
+/* Font and Base Styles */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #000000;
-  min-height: 100vh;
   color: #ffffff;
+  line-height: 1.6;
 }
 
-/* Navbar and Footer */
+/* Navbar Styles */
 .navbar {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(1, 51, 102, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%) !important;
   backdrop-filter: blur(15px);
@@ -33,15 +33,10 @@ body {
   border: 1px solid rgba(1, 51, 102, 0.5);
 }
 
-.footer {
-  background-color: #013366;
-  border-top: 1px solid rgba(1, 51, 102, 0.3);
-}
-
 .navbar-brand,
-.nav-link,
-.footer p {
+.nav-link {
   color: #ffffff !important;
+  font-weight: 500;
 }
 
 .nav-link {
@@ -53,97 +48,120 @@ body {
   overflow: hidden;
 }
 
-.nav-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(1, 51, 102, 0.4), transparent);
-  transition: left 0.5s;
-}
-
-.nav-link:hover::before {
-  left: 100%;
-}
-
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   background-color: rgba(1, 51, 102, 0.3);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(1, 51, 102, 0.3);
 }
 
-/* Add top padding to body to account for floating navbar */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Body padding for fixed navbar */
 body {
   padding-top: 100px;
 }
 
-/* Jumbotron Colors - Solid Colors */
-.schedule-jumbotron {
+/* Section Styles */
+.hero-section {
   background-color: #013366;
-  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
-.tutoring-jumbotron {
+.features-section {
   background-color: #000000;
-  position: relative;
 }
 
-.form-jumbotron {
+.info-section {
   background-color: #013366;
-  color: #ffffff;
-  position: relative;
 }
 
-.form-jumbotron .btn-primary {
+.page-header {
+  background-color: #013366;
+  text-align: center;
+}
+
+.schedule-content,
+.tutoring-content,
+.form-content {
   background-color: #000000;
-  border: 2px solid #013366;
+}
+
+/* Card Styles */
+.feature-card,
+.schedule-card,
+.tutoring-form-card,
+.form-card,
+.info-card {
+  background-color: rgba(1, 51, 102, 0.1);
+  border: 1px solid rgba(1, 51, 102, 0.3);
+  border-radius: 12px;
   transition: all 0.3s ease;
-  color: #ffffff;
 }
 
-.form-jumbotron .btn-primary:hover {
+.feature-card:hover,
+.schedule-card:hover,
+.tutoring-form-card:hover,
+.form-card:hover,
+.info-card:hover {
+  background-color: rgba(1, 51, 102, 0.2);
+  border-color: rgba(1, 51, 102, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(1, 51, 102, 0.3);
+}
+
+/* Icon Styles */
+.icon-circle {
+  width: 80px;
+  height: 80px;
   background-color: #013366;
-  border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(1, 51, 102, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
-/* Jumbotron hover pop effect */
-.schedule-jumbotron,
-.tutoring-jumbotron,
-.form-jumbotron {
-  transition: all 0.4s ease;
-  border-radius: 0;
-  position: relative;
+.feature-card:hover .icon-circle {
+  background-color: #ffffff;
+  transform: scale(1.1);
 }
 
-.schedule-jumbotron:hover,
-.tutoring-jumbotron:hover,
-.form-jumbotron:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 60px rgba(1, 51, 102, 0.3);
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  text-align: center;
 }
 
-/* Content sections styling */
-.container {
-  position: relative;
-  z-index: 1;
+.stat-item h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Form and table styling */
+/* Form Styles */
 .form-control,
 .form-select {
-  background-color: rgba(1, 51, 102, 0.2);
-  border: 1px solid rgba(1, 51, 102, 0.5);
+  background-color: rgba(1, 51, 102, 0.1);
+  border: 1px solid rgba(1, 51, 102, 0.3);
   color: #ffffff;
   transition: all 0.3s ease;
 }
 
 .form-control:focus,
 .form-select:focus {
-  background-color: rgba(1, 51, 102, 0.3);
+  background-color: rgba(1, 51, 102, 0.2);
   border-color: #013366;
   box-shadow: 0 0 0 0.2rem rgba(1, 51, 102, 0.25);
   color: #ffffff;
@@ -156,58 +174,59 @@ body {
 .form-label {
   color: #ffffff;
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
+.form-check-input:checked {
+  background-color: #013366;
+  border-color: #013366;
+}
+
+.form-check-label {
+  color: #ffffff;
+}
+
+/* Table Styles */
 .table {
   background-color: rgba(1, 51, 102, 0.1);
   color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(1, 51, 102, 0.2);
 }
 
 .table-dark {
   background-color: #013366;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) > td {
-  background-color: rgba(1, 51, 102, 0.1);
+.table-hover tbody tr:hover {
+  background-color: rgba(1, 51, 102, 0.2);
 }
 
+.table-striped > tbody > tr:nth-of-type(odd) > td {
+  background-color: rgba(1, 51, 102, 0.05);
+}
+
+/* Button Styles */
 .btn-primary {
   background-color: #013366;
-  border: 2px solid #013366;
-  transition: all 0.3s ease;
+  border-color: #013366;
   color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: #000000;
   border-color: #ffffff;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(1, 51, 102, 0.4);
-  color: #ffffff;
-}
-
-.btn-light {
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
-  color: #013366;
-  transition: all 0.3s ease;
-}
-
-.btn-light:hover {
-  background-color: #013366;
-  border-color: #013366;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 .btn-outline-light {
-  border: 2px solid #ffffff;
+  border-color: rgba(255, 255, 255, 0.8);
   color: #ffffff;
-  background: transparent;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
@@ -219,7 +238,75 @@ body {
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive adjustments */
+.btn-light {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #013366;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #013366;
+  border-color: #013366;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Badge Styles */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000000 !important;
+}
+
+.badge.bg-primary {
+  background-color: #013366 !important;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #013366;
+  border-top: 1px solid rgba(1, 51, 102, 0.3);
+  color: #ffffff;
+}
+
+.footer h5 {
+  color: #ffffff;
+}
+
+/* Utility Classes */
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.text-primary {
+  color: #013366 !important;
+}
+
+/* Hero Graphic */
+.hero-graphic {
+  background-color: rgba(1, 51, 102, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(1, 51, 102, 0.3);
+}
+
+.info-graphic {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     margin: 10px;
@@ -231,19 +318,57 @@ body {
     padding-top: 90px;
   }
   
-  .schedule-jumbotron:hover,
-  .tutoring-jumbotron:hover,
-  .form-jumbotron:hover {
-    transform: scale(1.01);
+  .hero-section {
+    min-height: 60vh;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
   }
 }
 
-/* Additional modern touches */
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .feature-card,
+  .schedule-card,
+  .tutoring-form-card,
+  .form-card,
+  .info-card {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text shadows for better readability */
 h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.lead {
-  color: rgba(255, 255, 255, 0.9);
+/* Focus styles for accessibility */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid rgba(1, 51, 102, 0.5);
+  outline-offset: 2px;
 }

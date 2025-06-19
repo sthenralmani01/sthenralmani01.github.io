@@ -5,53 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peak Flex - Tutoring Sign-Up</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Peak Flex</a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">Peak Flex</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="tutoring.html">Tutoring</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tutoring.html">Tutoring</a></li>
           <li class="nav-item"><a class="nav-link" href="form.html">Submit Form</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="py-5 container">
-    <h2 class="text-center mb-4">Sign Up for Tutoring</h2>
-    <form action="submit-tutoring.php" method="POST" class="mx-auto" style="max-width: 600px;">
-      <div class="mb-3">
-        <label for="studentName" class="form-label">Student Name</label>
-        <input type="text" id="studentName" name="studentName" class="form-control" required>
+  <!-- Page Header -->
+  <section class="page-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="display-4 fw-bold mb-3">Tutoring Sign-Up</h1>
+          <p class="lead">Get the academic support you need from our qualified tutors</p>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="subject" class="form-label">Subject</label>
-        <input type="text" id="subject" name="subject" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="timeSlot" class="form-label">Preferred Time</label>
-        <select id="timeSlot" name="timeSlot" class="form-select" required>
-          <option value="">Select</option>
-          <option value="8am">8:00 AM</option>
-          <option value="9am">9:00 AM</option>
-          <option value="10am">10:00 AM</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
   </section>
 
-  <footer class="footer py-4 text-center">
-    <p class="mb-0">&copy; 2025 Peak to Peak Charter School. All rights reserved.</p>
+  <!-- Tutoring Content -->
+  <section class="tutoring-content py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="tutoring-form-card p-4 mb-4">
+            <h3 class="mb-4">Book Your Tutoring Session</h3>
+            <form action="submit-tutoring.php" method="POST">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="studentName" class="form-label">Student Name</label>
+                  <input type="text" id="studentName" name="studentName" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="studentEmail" class="form-label">Email Address</label>
+                  <input type="email" id="studentEmail" name="studentEmail" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="subject" class="form-label">Subject</label>
+                  <select id="subject" name="subject" class="form-select" required>
+                    <option value="">Select a subject</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                    <option value="history">History</option>
+                    <option value="foreign-language">Foreign Language</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="timeSlot" class="form-label">Preferred Time</label>
+                  <select id="timeSlot" name="timeSlot" class="form-select" required>
+                    <option value="">Select a time</option>
+                    <option value="8:00-9:00">8:00 - 9:00 AM</option>
+                    <option value="9:15-10:15">9:15 - 10:15 AM</option>
+                    <option value="10:30-11:30">10:30 - 11:30 AM</option>
+                    <option value="12:15-1:15">12:15 - 1:15 PM</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="tutorPreference" class="form-label">Tutor Preference (Optional)</label>
+                  <select id="tutorPreference" name="tutorPreference" class="form-select">
+                    <option value="">No preference</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="peer">Peer Tutor</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="additionalInfo" class="form-label">Additional Information</label>
+                  <textarea id="additionalInfo" name="additionalInfo" rows="4" class="form-control" placeholder="Describe what you need help with or any specific topics..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg">Book Tutoring Session</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="info-card p-4 h-100">
+                <h4 class="mb-3">Available Tutors</h4>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><strong>Math:</strong> Ms. Johnson, Alex P.</li>
+                  <li class="mb-2"><strong>Science:</strong> Mr. Davis, Sarah M.</li>
+                  <li class="mb-2"><strong>English:</strong> Mrs. Wilson, Jake L.</li>
+                  <li class="mb-2"><strong>History:</strong> Mr. Brown, Emma K.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-card p-4 h-100">
+                <h4 class="mb-3">Tutoring Guidelines</h4>
+                <ul class="list-unstyled">
+                  <li class="mb-2">• Sessions are 50 minutes long</li>
+                  <li class="mb-2">• Bring your materials and assignments</li>
+                  <li class="mb-2">• Cancel at least 2 hours in advance</li>
+                  <li class="mb-2">• Be prepared with specific questions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Peak Flex</h5>
+          <p class="mb-0">Empowering Peak to Peak Charter School students</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">&copy; 2025 Peak to Peak Charter School. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
