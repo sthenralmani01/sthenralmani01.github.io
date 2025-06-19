@@ -99,13 +99,7 @@ body {
 }
 
 /* Overlay to darken image for better text contrast */
-.hero-section::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(1, 51, 102, 0.6); /* semi-transparent dark blue overlay */
-  z-index: 1;
-}
+
 
 /* Content inside hero section */
 .hero-section > .container {
