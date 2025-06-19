@@ -3,16 +3,19 @@
 /* Font */
 body {
   font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #000000 0%, #013366 50%, #000000 100%);
+  min-height: 100vh;
+  color: #ffffff;
 }
 
 /* Navbar and Footer */
 .navbar {
-  background-color: rgba(0, 40, 85, 0.9) !important; /* Semi-transparent navy */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(1, 51, 102, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
   margin: 15px;
-  box-shadow: 0 8px 32px rgba(0, 40, 85, 0.3);
+  box-shadow: 0 8px 32px rgba(1, 51, 102, 0.4);
   transition: all 0.3s ease;
   position: fixed !important;
   top: 0;
@@ -20,16 +23,19 @@ body {
   right: 0;
   z-index: 1030;
   width: calc(100% - 30px);
+  border: 1px solid rgba(1, 51, 102, 0.3);
 }
 
 .navbar:hover {
-  background-color: rgba(0, 40, 85, 0.95) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 40, 85, 0.4);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(1, 51, 102, 0.95) 50%, rgba(0, 0, 0, 0.95) 100%) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 50px rgba(1, 51, 102, 0.6);
+  border: 1px solid rgba(1, 51, 102, 0.5);
 }
 
 .footer {
-  background-color: #002855; /* Dark navy */
+  background: linear-gradient(135deg, #000000 0%, #013366 50%, #000000 100%);
+  border-top: 1px solid rgba(1, 51, 102, 0.3);
 }
 
 .navbar-brand,
@@ -40,55 +46,244 @@ body {
 
 .nav-link {
   transition: all 0.3s ease;
-  border-radius: 8px;
-  padding: 8px 16px !important;
+  border-radius: 12px;
+  padding: 10px 18px !important;
   margin: 0 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(1, 51, 102, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.nav-link:hover::before {
+  left: 100%;
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, rgba(1, 51, 102, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(1, 51, 102, 0.3);
 }
 
 /* Add top padding to body to account for floating navbar */
 body {
-  padding-top: 90px;
+  padding-top: 100px;
 }
 
-/* Jumbotron Colors */
+/* Jumbotron Colors with Gradients */
 .schedule-jumbotron {
-  background-color: #2e5fa0; /* Lighter dark blue */
+  background: linear-gradient(135deg, #013366 0%, #000000 50%, #013366 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.schedule-jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(1, 51, 102, 0.1) 0%, transparent 50%, rgba(1, 51, 102, 0.1) 100%);
+  pointer-events: none;
 }
 
 .tutoring-jumbotron {
-  background-color: #000000; /* Black */
+  background: linear-gradient(135deg, #000000 0%, #013366 30%, #000000 70%, #013366 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.tutoring-jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(1, 51, 102, 0.2) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .form-jumbotron {
-  background-color: #ffffff; /* White */
-  color: #002855;
-}
-.form-jumbotron .btn-primary {
-  background-color: #002855;
-  border-color: #002855;
-}
-.form-jumbotron .btn-primary:hover {
-  background-color: #001f44;
-  border-color: #001f44;
+  background: linear-gradient(135deg, #013366 0%, #000000 50%, #013366 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Jumbotron hover pop effect */
+.form-jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.form-jumbotron .btn-primary {
+  background: linear-gradient(135deg, #013366 0%, #000000 100%);
+  border: 2px solid #013366;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-jumbotron .btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.form-jumbotron .btn-primary:hover::before {
+  left: 100%;
+}
+
+.form-jumbotron .btn-primary:hover {
+  background: linear-gradient(135deg, #000000 0%, #013366 100%);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(1, 51, 102, 0.4);
+}
+
+/* Jumbotron hover pop effect with enhanced gradients */
 .schedule-jumbotron,
 .tutoring-jumbotron,
 .form-jumbotron {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s ease;
+  border-radius: 0;
+  position: relative;
 }
 
 .schedule-jumbotron:hover,
 .tutoring-jumbotron:hover,
 .form-jumbotron:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 20px 60px rgba(1, 51, 102, 0.3);
+}
+
+/* Content sections styling */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Form and table styling */
+.form-control,
+.form-select {
+  background: linear-gradient(135deg, rgba(1, 51, 102, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border: 1px solid rgba(1, 51, 102, 0.5);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: linear-gradient(135deg, rgba(1, 51, 102, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+  border-color: #013366;
+  box-shadow: 0 0 0 0.2rem rgba(1, 51, 102, 0.25);
+  color: #ffffff;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-label {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.table {
+  background: linear-gradient(135deg, rgba(1, 51, 102, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(1, 51, 102, 0.2);
+}
+
+.table-dark {
+  background: linear-gradient(135deg, #013366 0%, #000000 100%);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > td {
+  background: rgba(1, 51, 102, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #013366 0%, #000000 100%);
+  border: 2px solid #013366;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #000000 0%, #013366 100%);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(1, 51, 102, 0.4);
+}
+
+.btn-light {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: #013366;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+  border-color: #013366;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive adjustments */
@@ -96,10 +291,40 @@ body {
   .navbar {
     margin: 10px;
     width: calc(100% - 20px);
-    border-radius: 12px;
+    border-radius: 15px;
   }
   
   body {
-    padding-top: 80px;
+    padding-top: 90px;
   }
+  
+  .schedule-jumbotron:hover,
+  .tutoring-jumbotron:hover,
+  .form-jumbotron:hover {
+    transform: scale(1.01);
+  }
+}
+
+/* Additional modern touches */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animated background elements */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(1, 51, 102, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(1, 51, 102, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
