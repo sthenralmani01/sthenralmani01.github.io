@@ -10,7 +10,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background:  rgba(1, 51, 102, 0.9) 50% !important;
+  background:  rgba(1, 51, 102, 0.9) !important;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 20px;
@@ -27,7 +27,7 @@ body {
 }
 
 .navbar:hover {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(1, 51, 102, 0.95) 50%, rgba(0, 0, 0, 0.95) 100%) !important;
+  background:  rgba(1, 51, 102, 0.95) !important;
   transform: translateY(-3px);
   box-shadow: 0 15px 50px rgba(1, 51, 102, 0.6);
   border: 1px solid rgba(1, 51, 102, 0.5);
@@ -93,7 +93,6 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('peakHype.webp') no-repeat center center/cover;
-  filter: blur(2px);
   transform: scale(1.05); /* slightly zoom for better effect */
   z-index: 0;
 }
