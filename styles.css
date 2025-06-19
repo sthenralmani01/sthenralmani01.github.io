@@ -6,14 +6,53 @@ body {
 }
 
 /* Navbar and Footer */
-.navbar,
+.navbar {
+  background-color: rgba(0, 40, 85, 0.9) !important; /* Semi-transparent navy */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 0 8px 32px rgba(0, 40, 85, 0.3);
+  transition: all 0.3s ease;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  width: calc(100% - 30px);
+}
+
+.navbar:hover {
+  background-color: rgba(0, 40, 85, 0.95) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 40, 85, 0.4);
+}
+
 .footer {
   background-color: #002855; /* Dark navy */
 }
+
 .navbar-brand,
 .nav-link,
 .footer p {
   color: #ffffff !important;
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 8px 16px !important;
+  margin: 0 4px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Add top padding to body to account for floating navbar */
+body {
+  padding-top: 90px;
 }
 
 /* Jumbotron Colors */
@@ -37,6 +76,7 @@ body {
   background-color: #001f44;
   border-color: #001f44;
 }
+
 /* Jumbotron hover pop effect */
 .schedule-jumbotron,
 .tutoring-jumbotron,
@@ -49,4 +89,17 @@ body {
 .form-jumbotron:hover {
   transform: scale(1.03);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 12px;
+  }
+  
+  body {
+    padding-top: 80px;
+  }
 }
