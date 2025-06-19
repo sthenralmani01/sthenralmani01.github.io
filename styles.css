@@ -3,7 +3,7 @@
 /* Font */
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #000000 0%, #013366 50%, #000000 100%);
+  background-color: #000000;
   min-height: 100vh;
   color: #ffffff;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .footer {
-  background: linear-gradient(135deg, #000000 0%, #013366 50%, #000000 100%);
+  background-color: #013366;
   border-top: 1px solid rgba(1, 51, 102, 0.3);
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 .nav-link:hover {
-  background: linear-gradient(135deg, rgba(1, 51, 102, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-color: rgba(1, 51, 102, 0.3);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(1, 51, 102, 0.3);
 }
@@ -79,90 +79,38 @@ body {
   padding-top: 100px;
 }
 
-/* Jumbotron Colors with Gradients */
+/* Jumbotron Colors - Solid Colors */
 .schedule-jumbotron {
-  background: linear-gradient(135deg, #013366 0%, #000000 50%, #013366 100%);
+  background-color: #013366;
   position: relative;
-  overflow: hidden;
-}
-
-.schedule-jumbotron::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(1, 51, 102, 0.1) 0%, transparent 50%, rgba(1, 51, 102, 0.1) 100%);
-  pointer-events: none;
 }
 
 .tutoring-jumbotron {
-  background: linear-gradient(135deg, #000000 0%, #013366 30%, #000000 70%, #013366 100%);
+  background-color: #000000;
   position: relative;
-  overflow: hidden;
-}
-
-.tutoring-jumbotron::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, rgba(1, 51, 102, 0.2) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .form-jumbotron {
-  background: linear-gradient(135deg, #013366 0%, #000000 50%, #013366 100%);
+  background-color: #013366;
   color: #ffffff;
   position: relative;
-  overflow: hidden;
-}
-
-.form-jumbotron::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
-  pointer-events: none;
 }
 
 .form-jumbotron .btn-primary {
-  background: linear-gradient(135deg, #013366 0%, #000000 100%);
+  background-color: #000000;
   border: 2px solid #013366;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.form-jumbotron .btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.form-jumbotron .btn-primary:hover::before {
-  left: 100%;
+  color: #ffffff;
 }
 
 .form-jumbotron .btn-primary:hover {
-  background: linear-gradient(135deg, #000000 0%, #013366 100%);
+  background-color: #013366;
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(1, 51, 102, 0.4);
 }
 
-/* Jumbotron hover pop effect with enhanced gradients */
+/* Jumbotron hover pop effect */
 .schedule-jumbotron,
 .tutoring-jumbotron,
 .form-jumbotron {
@@ -187,7 +135,7 @@ body {
 /* Form and table styling */
 .form-control,
 .form-select {
-  background: linear-gradient(135deg, rgba(1, 51, 102, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-color: rgba(1, 51, 102, 0.2);
   border: 1px solid rgba(1, 51, 102, 0.5);
   color: #ffffff;
   transition: all 0.3s ease;
@@ -195,7 +143,7 @@ body {
 
 .form-control:focus,
 .form-select:focus {
-  background: linear-gradient(135deg, rgba(1, 51, 102, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background-color: rgba(1, 51, 102, 0.3);
   border-color: #013366;
   box-shadow: 0 0 0 0.2rem rgba(1, 51, 102, 0.25);
   color: #ffffff;
@@ -211,7 +159,7 @@ body {
 }
 
 .table {
-  background: linear-gradient(135deg, rgba(1, 51, 102, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-color: rgba(1, 51, 102, 0.1);
   color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
@@ -219,69 +167,54 @@ body {
 }
 
 .table-dark {
-  background: linear-gradient(135deg, #013366 0%, #000000 100%);
+  background-color: #013366;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) > td {
-  background: rgba(1, 51, 102, 0.1);
+  background-color: rgba(1, 51, 102, 0.1);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #013366 0%, #000000 100%);
+  background-color: #013366;
   border: 2px solid #013366;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.btn-primary:hover::before {
-  left: 100%;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #000000 0%, #013366 100%);
+  background-color: #000000;
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(1, 51, 102, 0.4);
+  color: #ffffff;
 }
 
 .btn-light {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
   color: #013366;
   transition: all 0.3s ease;
 }
 
 .btn-light:hover {
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+  background-color: #013366;
   border-color: #013366;
-  color: #000000;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 .btn-outline-light {
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid #ffffff;
   color: #ffffff;
   background: transparent;
   transition: all 0.3s ease;
 }
 
 .btn-outline-light:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+  background-color: #ffffff;
   border-color: #ffffff;
-  color: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
@@ -313,18 +246,4 @@ h1, h2, h3, h4, h5, h6 {
 
 .lead {
   color: rgba(255, 255, 255, 0.9);
-}
-
-/* Animated background elements */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 20% 80%, rgba(1, 51, 102, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(1, 51, 102, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: -1;
 }
