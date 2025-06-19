@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Font */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar and Footer */
+.navbar,
+.footer {
+  background-color: #002855; /* Dark navy */
+}
+.navbar-brand,
+.nav-link,
+.footer p {
+  color: #ffffff !important;
+}
+
+/* Jumbotron Colors */
+.schedule-jumbotron {
+  background-color: #2e5fa0; /* Lighter dark blue */
+}
+
+.tutoring-jumbotron {
+  background-color: #000000; /* Black */
+}
+
+.form-jumbotron {
+  background-color: #ffffff; /* White */
+  color: #002855;
+}
+.form-jumbotron .btn-primary {
+  background-color: #002855;
+  border-color: #002855;
+}
+.form-jumbotron .btn-primary:hover {
+  background-color: #001f44;
+  border-color: #001f44;
+}
+/* Jumbotron hover pop effect */
+.schedule-jumbotron,
+.tutoring-jumbotron,
+.form-jumbotron {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-jumbotron:hover,
+.tutoring-jumbotron:hover,
+.form-jumbotron:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
