@@ -46,7 +46,17 @@
               <p class="text-muted">Sign in to access your Peak Flex dashboard</p>
             </div>
             
-            <form action="student.html" method="GET" id="loginForm">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="userRole" class="form-label">I am a:</label>
+                <select id="userRole" name="userRole" class="form-select form-select-lg" required>
+                  <option value="">Select your role</option>
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+                  <option value="staff">Staff/Administrator</option>
+                </select>
+              </div>
+
               <div class="mb-3">
                 <label for="username" class="form-label">Username or Email</label>
                 <input type="text" id="username" name="username" class="form-control form-control-lg" required placeholder="Enter your username or email">
@@ -82,27 +92,82 @@
         
         <div class="col-lg-6 offset-lg-1 d-none d-lg-block">
           <div class="login-info p-4" data-aos="fade-left" data-aos-duration="1200">
-            <h3 class="fw-bold mb-4">Access Your Student Portal</h3>
-            <div class="feature-list">
+            <h3 class="fw-bold mb-4">Access Your Portal</h3>
+            
+            <!-- Student Features -->
+            <div class="role-features mb-4" id="studentFeatures">
+              <h5 class="text-primary mb-3">👨‍🎓 Student Portal</h5>
               <div class="feature-item d-flex align-items-center mb-3">
                 <div class="feature-icon-small me-3">📅</div>
                 <div>
-                  <h5 class="mb-1">View Your Schedule</h5>
-                  <p class="mb-0 text-muted">Check flex periods and plan your day</p>
+                  <h6 class="mb-1">View Your Schedule</h6>
+                  <p class="mb-0 text-muted small">Check flex periods and plan your day</p>
                 </div>
               </div>
               <div class="feature-item d-flex align-items-center mb-3">
                 <div class="feature-icon-small me-3">👨‍🏫</div>
                 <div>
-                  <h5 class="mb-1">Book Tutoring Sessions</h5>
-                  <p class="mb-0 text-muted">Get academic support when you need it</p>
+                  <h6 class="mb-1">Book Tutoring Sessions</h6>
+                  <p class="mb-0 text-muted small">Get academic support when you need it</p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-center">
+                <div class="feature-icon-small me-3">📝</div>
+                <div>
+                  <h6 class="mb-1">Submit Forms</h6>
+                  <p class="mb-0 text-muted small">Communicate with school administration</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Teacher Features -->
+            <div class="role-features mb-4" id="teacherFeatures" style="display: none;">
+              <h5 class="text-primary mb-3">👩‍🏫 Teacher Portal</h5>
+              <div class="feature-item d-flex align-items-center mb-3">
+                <div class="feature-icon-small me-3">👨‍🏫</div>
+                <div>
+                  <h6 class="mb-1">Manage Tutoring</h6>
+                  <p class="mb-0 text-muted small">Schedule and track tutoring sessions</p>
                 </div>
               </div>
               <div class="feature-item d-flex align-items-center mb-3">
+                <div class="feature-icon-small me-3">📋</div>
+                <div>
+                  <h6 class="mb-1">Room & Attendance</h6>
+                  <p class="mb-0 text-muted small">Track students in your classroom</p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-center">
                 <div class="feature-icon-small me-3">📝</div>
                 <div>
-                  <h5 class="mb-1">Submit Forms</h5>
-                  <p class="mb-0 text-muted">Communicate with school administration</p>
+                  <h6 class="mb-1">Student Requests</h6>
+                  <p class="mb-0 text-muted small">Review and respond to student communications</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Staff Features -->
+            <div class="role-features mb-4" id="staffFeatures" style="display: none;">
+              <h5 class="text-primary mb-3">👔 Staff Portal</h5>
+              <div class="feature-item d-flex align-items-center mb-3">
+                <div class="feature-icon-small me-3">🏢</div>
+                <div>
+                  <h6 class="mb-1">Campus Overview</h6>
+                  <p class="mb-0 text-muted small">Monitor all rooms and student locations</p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-center mb-3">
+                <div class="feature-icon-small me-3">🔍</div>
+                <div>
+                  <h6 class="mb-1">Student Locator</h6>
+                  <p class="mb-0 text-muted small">Find any student on campus instantly</p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-center">
+                <div class="feature-icon-small me-3">📊</div>
+                <div>
+                  <h6 class="mb-1">Campus Reports</h6>
+                  <p class="mb-0 text-muted small">View attendance and activity reports</p>
                 </div>
               </div>
             </div>
@@ -118,7 +183,7 @@
       <div class="row">
         <div class="col-md-6">
           <h5 class="fw-bold">Peak Flex</h5>
-          <p class="mb-0">Empowering Peak to Peak Charter School students</p>
+          <p class="mb-0">Empowering Peak to Peak Charter School community</p>
         </div>
         <div class="col-md-6 text-md-end">
           <p class="mb-0">&copy; 2025 Peak to Peak Charter School. All rights reserved.</p>
@@ -136,16 +201,56 @@
       easing: 'ease-in-out',
     });
 
-    // Simple form validation and redirect
+    // Show different features based on selected role
+    document.getElementById('userRole').addEventListener('change', function() {
+      const role = this.value;
+      const studentFeatures = document.getElementById('studentFeatures');
+      const teacherFeatures = document.getElementById('teacherFeatures');
+      const staffFeatures = document.getElementById('staffFeatures');
+      
+      // Hide all features first
+      studentFeatures.style.display = 'none';
+      teacherFeatures.style.display = 'none';
+      staffFeatures.style.display = 'none';
+      
+      // Show relevant features
+      if (role === 'student') {
+        studentFeatures.style.display = 'block';
+      } else if (role === 'teacher') {
+        teacherFeatures.style.display = 'block';
+      } else if (role === 'staff') {
+        staffFeatures.style.display = 'block';
+      }
+    });
+
+    // Form validation and redirect based on role
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
+      const role = document.getElementById('userRole').value;
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
       
+      if (!role) {
+        alert('Please select your role (Student, Teacher, or Staff).');
+        return;
+      }
+      
       if (username && password) {
-        // In a real application, you would validate credentials here
-        window.location.href = 'student.html';
+        // Redirect based on selected role
+        switch(role) {
+          case 'student':
+            window.location.href = 'student.html';
+            break;
+          case 'teacher':
+            window.location.href = 'teacher.html';
+            break;
+          case 'staff':
+            window.location.href = 'staff.html';
+            break;
+          default:
+            alert('Please select a valid role.');
+        }
       } else {
         alert('Please enter both username and password.');
       }
