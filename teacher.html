@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peak Flex - Teacher Dashboard</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- AOS Animations CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="teacher.html" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-in-out">
+        <img src="peakLogo.png" alt="Peak Flex Logo" class="navbar-logo me-2" />
+        <span class="fw-bold fs-3 mb-0">Peak Flex</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">
+            <a class="nav-link" href="teacher-tutoring.html">Tutoring</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="200" data-aos-duration="700">
+            <a class="nav-link" href="teacher-room.html">My Room/Attendance</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="300" data-aos-duration="700">
+            <a class="nav-link" href="teacher-requests.html">Student Requests</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="400" data-aos-duration="700">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section py-5" aria-label="Welcome Section">
+    <div class="container">
+      <div class="row align-items-center min-vh-75">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h1 class="display-4 fw-bold mb-4 hero-title">Teacher Dashboard</h1>
+          <p class="lead mb-4 hero-subtitle">Manage your tutoring sessions, track room attendance, and respond to student requests all in one place.</p>
+          <div class="d-flex gap-3 flex-wrap hero-buttons">
+            <a href="teacher-tutoring.html" class="btn btn-primary btn-lg shadow-lg">Manage Tutoring</a>
+            <a href="teacher-room.html" class="btn btn-outline-light btn-lg shadow-lg">Check Attendance</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <div class="hero-graphic p-5 shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-chalkboard-teacher fa-5x text-primary icon-3d"></i>
+            </div>
+            <h3 class="hero-graphic-title">Teaching Excellence</h3>
+            <p class="hero-graphic-text">Streamline your teaching workflow and support student success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section py-5" aria-label="Features">
+    <div class="container">
+      <div class="row text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-12">
+          <h2 class="display-5 fw-bold mb-3">Teacher Tools</h2>
+          <p class="lead">Everything you need to manage your classroom and support students</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="100">
+          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <div class="icon-circle icon-hover-scale">👨‍🏫</div>
+            </div>
+            <h4 class="mb-3 feature-title">Tutoring Management</h4>
+            <p class="mb-4 feature-text">View and manage your tutoring sessions, student appointments, and availability.</p>
+            <a href="teacher-tutoring.html" class="btn btn-primary feature-btn">Manage Tutoring</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="300">
+          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <div class="icon-circle icon-hover-scale">📋</div>
+            </div>
+            <h4 class="mb-3 feature-title">Room & Attendance</h4>
+            <p class="mb-4 feature-text">Track student attendance in your room and manage flex period check-ins.</p>
+            <a href="teacher-room.html" class="btn btn-primary feature-btn">View Room</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="500">
+          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <div class="icon-circle icon-hover-scale">📝</div>
+            </div>
+            <h4 class="mb-3 feature-title">Student Requests</h4>
+            <p class="mb-4 feature-text">Review and respond to student requests, forms, and communications.</p>
+            <a href="teacher-requests.html" class="btn btn-primary feature-btn">View Requests</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats Section -->
+  <section class="info-section py-5" aria-label="Quick Stats">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <h2 class="display-6 fw-bold mb-4">Today's Overview</h2>
+          <p class="mb-4 info-text">Stay on top of your daily teaching responsibilities with real-time updates and quick access to essential tools.</p>
+          <ul class="list-unstyled info-list">
+            <li class="mb-2">✓ Real-time attendance tracking</li>
+            <li class="mb-2">✓ Instant student request notifications</li>
+            <li class="mb-2">✓ Flexible tutoring schedule management</li>
+            <li class="mb-2">✓ Seamless communication tools</li>
+          </ul>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="info-graphic p-4 shadow-lg rounded-4 text-center">
+            <h4 class="mb-4">Today's Stats</h4>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">12</h3>
+                <p>Students in Room</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">3</h3>
+                <p>Tutoring Sessions</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">5</h3>
+                <p>Pending Requests</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">98%</h3>
+                <p>Attendance Rate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4" aria-label="Footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+          <h5 class="fw-bold">Peak Flex</h5>
+          <p class="mb-0">Empowering Peak to Peak Charter School educators</p>
+        </div>
+        <div class="col-md-6 text-md-end" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <p class="mb-0">&copy; 2025 Peak to Peak Charter School. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animations JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-in-out',
+    });
+  </script>
+
+</body>
+</html>

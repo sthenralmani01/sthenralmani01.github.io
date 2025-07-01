@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peak Flex - Staff Dashboard</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- AOS Animations CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="staff.html" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-in-out">
+        <img src="peakLogo.png" alt="Peak Flex Logo" class="navbar-logo me-2" />
+        <span class="fw-bold fs-3 mb-0">Peak Flex</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">
+            <a class="nav-link" href="staff-overview.html">Campus Overview</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="200" data-aos-duration="700">
+            <a class="nav-link" href="staff-reports.html">Reports</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="300" data-aos-duration="700">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section py-5" aria-label="Welcome Section">
+    <div class="container">
+      <div class="row align-items-center min-vh-75">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h1 class="display-4 fw-bold mb-4 hero-title">Staff Dashboard</h1>
+          <p class="lead mb-4 hero-subtitle">Monitor campus-wide activities, track student locations, and oversee all rooms and attendance in real-time.</p>
+          <div class="d-flex gap-3 flex-wrap hero-buttons">
+            <a href="#campus-overview" class="btn btn-primary btn-lg shadow-lg">View Campus</a>
+            <a href="#student-locator" class="btn btn-outline-light btn-lg shadow-lg">Find Students</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <div class="hero-graphic p-5 shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-building fa-5x text-primary icon-3d"></i>
+            </div>
+            <h3 class="hero-graphic-title">Campus Management</h3>
+            <p class="hero-graphic-text">Complete oversight of all campus activities and student locations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Overview Section -->
+  <section id="campus-overview" class="features-section py-5" aria-label="Campus Overview">
+    <div class="container">
+      <div class="row text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-12">
+          <h2 class="display-5 fw-bold mb-3">Campus Overview</h2>
+          <p class="lead">Real-time view of all rooms and student locations</p>
+        </div>
+      </div>
+      
+      <!-- Room Grid -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="room-card p-4 shadow-lg rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="mb-0">Room 101 - Math</h4>
+              <span class="badge bg-success">15/20</span>
+            </div>
+            <p class="text-muted mb-3">Teacher: Ms. Johnson</p>
+            <div class="student-list">
+              <small class="d-block">Alex P., Sarah M., Jake L., Emma K., Michael R.</small>
+              <small class="d-block">+ 10 more students</small>
+            </div>
+            <button class="btn btn-sm btn-outline-primary mt-2" onclick="viewRoomDetails('101')">View Details</button>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="room-card p-4 shadow-lg rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="mb-0">Room 102 - Science</h4>
+              <span class="badge bg-warning">8/15</span>
+            </div>
+            <p class="text-muted mb-3">Teacher: Mr. Davis</p>
+            <div class="student-list">
+              <small class="d-block">Lisa W., Tom H., Anna B., Chris D.</small>
+              <small class="d-block">+ 4 more students</small>
+            </div>
+            <button class="btn btn-sm btn-outline-primary mt-2" onclick="viewRoomDetails('102')">View Details</button>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="room-card p-4 shadow-lg rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="mb-0">Room 103 - English</h4>
+              <span class="badge bg-success">12/18</span>
+            </div>
+            <p class="text-muted mb-3">Teacher: Mrs. Wilson</p>
+            <div class="student-list">
+              <small class="d-block">David K., Maria S., Ryan T., Sophie L.</small>
+              <small class="d-block">+ 8 more students</small>
+            </div>
+            <button class="btn btn-sm btn-outline-primary mt-2" onclick="viewRoomDetails('103')">View Details</button>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="room-card p-4 shadow-lg rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="mb-0">Library</h4>
+              <span class="badge bg-primary">25/30</span>
+            </div>
+            <p class="text-muted mb-3">Supervisor: Ms. Carter</p>
+            <div class="student-list">
+              <small class="d-block">Study groups and individual work</small>
+              <small class="d-block">25 students currently present</small>
+            </div>
+            <button class="btn btn-sm btn-outline-primary mt-2" onclick="viewRoomDetails('library')">View Details</button>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="room-card p-4 shadow-lg rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="mb-0">Cafeteria</h4>
+              <span class="badge bg-info">45/60</span>
+            </div>
+            <p class="text-muted mb-3">Lunch Period</p>
+            <div class="student-list">
+              <small class="d-block">Multiple grade levels</small>
+              <small class="d-block">45 students eating lunch</small>
+            </div>
+            <button class="btn btn-sm btn-outline-primary mt-2" onclick="viewRoomDetails('cafeteria')">View Details</button>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="room-card p-4 shadow-lg rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="mb-0">Gymnasium</h4>
+              <span class="badge bg-success">20/25</span>
+            </div>
+            <p class="text-muted mb-3">Coach: Mr. Thompson</p>
+            <div class="student-list">
+              <small class="d-block">PE Class and Free Play</small>
+              <small class="d-block">20 students active</small>
+            </div>
+            <button class="btn btn-sm btn-outline-primary mt-2" onclick="viewRoomDetails('gym')">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Locator Section -->
+  <section id="student-locator" class="info-section py-5" aria-label="Student Locator">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="locator-card p-4 shadow-lg rounded-4" data-aos="zoom-in" data-aos-duration="1000">
+            <h3 class="mb-4 text-center">Student Locator</h3>
+            <div class="row g-3">
+              <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg" placeholder="Search by student name or ID..." id="studentSearch">
+              </div>
+              <div class="col-md-4">
+                <button class="btn btn-primary btn-lg w-100" onclick="searchStudent()">Find Student</button>
+              </div>
+            </div>
+            
+            <div id="searchResults" class="mt-4" style="display: none;">
+              <div class="alert alert-info">
+                <h5>Student Found:</h5>
+                <p class="mb-1"><strong>Name:</strong> <span id="studentName"></span></p>
+                <p class="mb-1"><strong>Current Location:</strong> <span id="studentLocation"></span></p>
+                <p class="mb-1"><strong>Teacher/Supervisor:</strong> <span id="studentSupervisor"></span></p>
+                <p class="mb-0"><strong>Check-in Time:</strong> <span id="checkInTime"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="stats-section py-5" aria-label="Campus Statistics">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12 mb-4" data-aos="fade-up">
+          <h2 class="display-6 fw-bold">Campus Statistics</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-card p-4 text-center shadow-lg rounded-4">
+            <h3 class="fw-bold text-primary stat-number">485</h3>
+            <p>Total Students</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-card p-4 text-center shadow-lg rounded-4">
+            <h3 class="fw-bold text-primary stat-number">467</h3>
+            <p>Present Today</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-card p-4 text-center shadow-lg rounded-4">
+            <h3 class="fw-bold text-primary stat-number">18</h3>
+            <p>Active Rooms</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-card p-4 text-center shadow-lg rounded-4">
+            <h3 class="fw-bold text-primary stat-number">96%</h3>
+            <p>Attendance Rate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4" aria-label="Footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+          <h5 class="fw-bold">Peak Flex</h5>
+          <p class="mb-0">Empowering Peak to Peak Charter School administration</p>
+        </div>
+        <div class="col-md-6 text-md-end" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <p class="mb-0">&copy; 2025 Peak to Peak Charter School. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animations JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-in-out',
+    });
+
+    // Sample student data for demonstration
+    const studentData = {
+      'alex p': { name: 'Alex Peterson', location: 'Room 101 - Math', supervisor: 'Ms. Johnson', checkIn: '8:15 AM' },
+      'sarah m': { name: 'Sarah Martinez', location: 'Library', supervisor: 'Ms. Carter', checkIn: '9:30 AM' },
+      'jake l': { name: 'Jake Lopez', location: 'Room 103 - English', supervisor: 'Mrs. Wilson', checkIn: '10:45 AM' },
+      'emma k': { name: 'Emma Kim', location: 'Cafeteria', supervisor: 'Lunch Staff', checkIn: '11:30 AM' },
+      'michael r': { name: 'Michael Roberts', location: 'Gymnasium', supervisor: 'Coach Thompson', checkIn: '12:00 PM' }
+    };
+
+    function searchStudent() {
+      const searchTerm = document.getElementById('studentSearch').value.toLowerCase().trim();
+      const resultsDiv = document.getElementById('searchResults');
+      
+      if (searchTerm === '') {
+        alert('Please enter a student name to search.');
+        return;
+      }
+      
+      const student = studentData[searchTerm];
+      
+      if (student) {
+        document.getElementById('studentName').textContent = student.name;
+        document.getElementById('studentLocation').textContent = student.location;
+        document.getElementById('studentSupervisor').textContent = student.supervisor;
+        document.getElementById('checkInTime').textContent = student.checkIn;
+        resultsDiv.style.display = 'block';
+      } else {
+        resultsDiv.innerHTML = '<div class="alert alert-warning">Student not found. Please check the name and try again.</div>';
+        resultsDiv.style.display = 'block';
+      }
+    }
+
+    function viewRoomDetails(roomId) {
+      alert(`Viewing detailed information for ${roomId}. This would open a detailed room view in a real application.`);
+    }
+
+    // Allow Enter key to trigger search
+    document.getElementById('studentSearch').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchStudent();
+      }
+    });
+  </script>
+
+</body>
+</html>
