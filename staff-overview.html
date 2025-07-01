@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peak Flex - Campus Overview</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- AOS Animations CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="staff.html" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-in-out">
+        <img src="peakLogo.png" alt="Peak Flex Logo" class="navbar-logo me-2" />
+        <span class="fw-bold fs-3 mb-0">Peak Flex</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">
+            <a class="nav-link active" href="staff-overview.html">Campus Overview</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="200" data-aos-duration="700">
+            <a class="nav-link" href="staff-reports.html">Reports</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="300" data-aos-duration="700">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="display-4 fw-bold mb-3">Campus Overview</h1>
+          <p class="lead">Real-time monitoring of all campus activities and student locations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Map Section -->
+  <section class="campus-map py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="info-card p-4">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h3 class="mb-2">Live Campus Status</h3>
+                <p class="mb-0">Current Period: <strong>3rd Period (10:30 - 11:30 AM)</strong> | Total Students Present: <strong>467/485</strong></p>
+              </div>
+              <div class="col-md-4 text-md-end">
+                <button class="btn btn-primary me-2">Refresh Data</button>
+                <button class="btn btn-outline-warning">Emergency Alert</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Building Layout -->
+      <div class="row g-4">
+        <!-- Academic Wing -->
+        <div class="col-lg-6">
+          <div class="schedule-card p-4">
+            <h4 class="mb-4">🏫 Academic Wing</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Room 101 - Math</h6>
+                    <span class="badge bg-success">15/20</span>
+                  </div>
+                  <small class="text-muted">Ms. Johnson</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('101')">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Room 102 - Science</h6>
+                    <span class="badge bg-warning">8/15</span>
+                  </div>
+                  <small class="text-muted">Mr. Davis</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('102')">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Room 103 - English</h6>
+                    <span class="badge bg-success">12/18</span>
+                  </div>
+                  <small class="text-muted">Mrs. Wilson</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('103')">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Room 104 - History</h6>
+                    <span class="badge bg-success">14/16</span>
+                  </div>
+                  <small class="text-muted">Mr. Brown</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('104')">View Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Common Areas -->
+        <div class="col-lg-6">
+          <div class="schedule-card p-4">
+            <h4 class="mb-4">🏛️ Common Areas</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Library</h6>
+                    <span class="badge bg-primary">25/30</span>
+                  </div>
+                  <small class="text-muted">Ms. Carter</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('library')">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Cafeteria</h6>
+                    <span class="badge bg-info">45/60</span>
+                  </div>
+                  <small class="text-muted">Lunch Staff</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('cafeteria')">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Gymnasium</h6>
+                    <span class="badge bg-success">20/25</span>
+                  </div>
+                  <small class="text-muted">Coach Thompson</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('gym')">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="room-card p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Computer Lab</h6>
+                    <span class="badge bg-warning">18/24</span>
+                  </div>
+                  <small class="text-muted">Mr. Tech</small>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="viewRoomDetails('computer-lab')">View Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="info-card p-4 text-center">
+            <h5 class="mb-3">🔍 Student Locator</h5>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Search student name..." id="quickSearch">
+            </div>
+            <button class="btn btn-primary" onclick="quickSearchStudent()">Find Student</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card p-4 text-center">
+            <h5 class="mb-3">📊 Quick Stats</h5>
+            <p class="mb-1"><strong>Attendance:</strong> 96.3%</p>
+            <p class="mb-1"><strong>Active Rooms:</strong> 18/20</p>
+            <p class="mb-3"><strong>Capacity Used:</strong> 78%</p>
+            <button class="btn btn-outline-primary">View Full Stats</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card p-4 text-center">
+            <h5 class="mb-3">⚠️ Alerts</h5>
+            <p class="mb-1 text-warning">2 students checked out</p>
+            <p class="mb-1 text-info">1 room at capacity</p>
+            <p class="mb-3 text-success">No emergencies</p>
+            <button class="btn btn-outline-warning">View All Alerts</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4" aria-label="Footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+          <h5 class="fw-bold">Peak Flex</h5>
+          <p class="mb-0">Empowering Peak to Peak Charter School administration</p>
+        </div>
+        <div class="col-md-6 text-md-end" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <p class="mb-0">&copy; 2025 Peak to Peak Charter School. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animations JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-in-out',
+    });
+
+    function viewRoomDetails(roomId) {
+      alert(`Viewing detailed information for ${roomId}. This would show a detailed room view with all students, check-in times, and activities.`);
+    }
+
+    function quickSearchStudent() {
+      const searchTerm = document.getElementById('quickSearch').value;
+      if (searchTerm.trim() === '') {
+        alert('Please enter a student name to search.');
+        return;
+      }
+      alert(`Searching for student: ${searchTerm}. This would show their current location and status.`);
+    }
+  </script>
+
+</body>
+</html>
