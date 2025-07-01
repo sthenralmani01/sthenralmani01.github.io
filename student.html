@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peak Flex - Student Dashboard</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- AOS Animations CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="student.html" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-in-out">
+        <img src="peakLogo.png" alt="Peak Flex Logo" class="navbar-logo me-2" />
+        <span class="fw-bold fs-3 mb-0">Peak Flex</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">
+            <a class="nav-link" href="schedule.html">Schedule</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="200" data-aos-duration="700">
+            <a class="nav-link" href="tutoring.html">Tutoring</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="300" data-aos-duration="700">
+            <a class="nav-link" href="form.html">Submit Form</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="400" data-aos-duration="700">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section py-5" aria-label="Welcome Section">
+    <div class="container">
+      <div class="row align-items-center min-vh-75">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h1 class="display-4 fw-bold mb-4 hero-title">Welcome to Peak Flex</h1>
+          <p class="lead mb-4 hero-subtitle">Your comprehensive platform for managing schedules, tutoring sessions, and school communications at Peak to Peak Charter School.</p>
+          <div class="d-flex gap-3 flex-wrap hero-buttons">
+            <a href="schedule.html" class="btn btn-primary btn-lg shadow-lg">View Schedule</a>
+            <a href="tutoring.html" class="btn btn-outline-light btn-lg shadow-lg">Get Tutoring</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <div class="hero-graphic p-5 shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-calendar-alt fa-5x text-primary icon-3d"></i>
+            </div>
+            <h3 class="hero-graphic-title">Organize Your Day</h3>
+            <p class="hero-graphic-text">Manage your flex periods, tutoring sessions, and activities all in one place.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section py-5" aria-label="Features">
+    <div class="container">
+      <div class="row text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-12">
+          <h2 class="display-5 fw-bold mb-3">Everything You Need</h2>
+          <p class="lead">Three powerful tools to enhance your Peak to Peak experience</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="100">
+          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <div class="icon-circle icon-hover-scale">📅</div>
+            </div>
+            <h4 class="mb-3 feature-title">View Schedule</h4>
+            <p class="mb-4 feature-text">Check your flex periods, available time slots, and plan your day effectively.</p>
+            <a href="schedule.html" class="btn btn-primary feature-btn">View Schedule</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="300">
+          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <div class="icon-circle icon-hover-scale">👨‍🏫</div>
+            </div>
+            <h4 class="mb-3 feature-title">Sign Up for Tutoring</h4>
+            <p class="mb-4 feature-text">Get help from teachers and peer tutors. Book your sessions easily online.</p>
+            <a href="tutoring.html" class="btn btn-primary feature-btn">Sign Up</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="500">
+          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+            <div class="feature-icon mb-3">
+              <div class="icon-circle icon-hover-scale">📝</div>
+            </div>
+            <h4 class="mb-3 feature-title">Submit Forms</h4>
+            <p class="mb-4 feature-text">Send feedback, requests, or communicate with school administration.</p>
+            <a href="form.html" class="btn btn-primary feature-btn">Submit Form</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="info-section py-5" aria-label="Information">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <h2 class="display-6 fw-bold mb-4">Streamline Your School Day</h2>
+          <p class="mb-4 info-text">Peak Flex makes it easy to manage your time at Peak to Peak Charter School. Whether you need to check your schedule, get academic support, or communicate with staff, everything is just a click away.</p>
+          <ul class="list-unstyled info-list">
+            <li class="mb-2">✓ Real-time schedule updates</li>
+            <li class="mb-2">✓ Easy tutoring session booking</li>
+            <li class="mb-2">✓ Direct communication with staff</li>
+            <li class="mb-2">✓ Mobile-friendly design</li>
+          </ul>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="info-graphic p-4 shadow-lg rounded-4 text-center">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">100+</h3>
+                <p>Students Served</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">24/7</h3>
+                <p>Access Available</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">3</h3>
+                <p>Core Features</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4" aria-label="Footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+          <h5 class="fw-bold">Peak Flex</h5>
+          <p class="mb-0">Empowering Peak to Peak Charter School students</p>
+        </div>
+        <div class="col-md-6 text-md-end" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <p class="mb-0">&copy; 2025 Peak to Peak Charter School. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animations JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-in-out',
+    });
+  </script>
+
+</body>
+</html>

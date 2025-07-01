@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Peak Flex - Home</title>
+  <title>Peak Flex - Welcome</title>
   
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -35,13 +35,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">
-            <a class="nav-link" href="schedule.html">Schedule</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item" data-aos="fade-down" data-aos-delay="200" data-aos-duration="700">
-            <a class="nav-link" href="tutoring.html">Tutoring</a>
-          </li>
-          <li class="nav-item" data-aos="fade-down" data-aos-delay="300" data-aos-duration="700">
-            <a class="nav-link" href="form.html">Submit Form</a>
+            <a class="nav-link" href="login.html">Login</a>
           </li>
         </ul>
       </div>
@@ -53,101 +50,129 @@
     <div class="container">
       <div class="row align-items-center min-vh-75">
         <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-          <h1 class="display-4 fw-bold mb-4 hero-title">Welcome to Peak Flex</h1>
-          <p class="lead mb-4 hero-subtitle">Your comprehensive platform for managing schedules, tutoring sessions, and school communications at Peak to Peak Charter School.</p>
+          <h1 class="display-3 fw-bold mb-4 hero-title">Welcome to Peak Flex</h1>
+          <p class="lead mb-4 hero-subtitle">The ultimate platform for Peak to Peak Charter School students to manage schedules, access tutoring, and stay connected with school administration.</p>
           <div class="d-flex gap-3 flex-wrap hero-buttons">
-            <a href="schedule.html" class="btn btn-primary btn-lg shadow-lg">View Schedule</a>
-            <a href="tutoring.html" class="btn btn-outline-light btn-lg shadow-lg">Get Tutoring</a>
+            <a href="login.html" class="btn btn-primary btn-lg shadow-lg">Get Started</a>
+            <a href="#about" class="btn btn-outline-light btn-lg shadow-lg">Learn More</a>
           </div>
         </div>
         <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
           <div class="hero-graphic p-5 shadow-lg rounded-4">
             <div class="feature-icon mb-3">
-              <i class="fas fa-calendar-alt fa-5x text-primary icon-3d"></i>
+              <i class="fas fa-graduation-cap fa-5x text-primary icon-3d"></i>
             </div>
-            <h3 class="hero-graphic-title">Organize Your Day</h3>
-            <p class="hero-graphic-text">Manage your flex periods, tutoring sessions, and activities all in one place.</p>
+            <h3 class="hero-graphic-title">Student Success</h3>
+            <p class="hero-graphic-text">Empowering students with the tools they need to excel academically and personally.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features-section py-5" aria-label="Features">
+  <!-- Call to Action Section -->
+  <section class="cta-section py-5" aria-label="Call to Action">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="cta-card p-5 shadow-lg rounded-4">
+            <h2 class="display-5 fw-bold mb-4">Ready to Get Started?</h2>
+            <p class="lead mb-4">Join hundreds of Peak to Peak students who are already using Peak Flex to enhance their school experience.</p>
+            <a href="login.html" class="btn btn-primary btn-lg px-5 py-3 shadow-lg">Login to Your Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5" aria-label="About Peak Flex">
     <div class="container">
       <div class="row text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
         <div class="col-12">
-          <h2 class="display-5 fw-bold mb-3">Everything You Need</h2>
-          <p class="lead">Three powerful tools to enhance your Peak to Peak experience</p>
+          <h2 class="display-5 fw-bold mb-3">About Peak Flex</h2>
+          <p class="lead">Discover how Peak Flex transforms the student experience at Peak to Peak Charter School</p>
         </div>
       </div>
-      <div class="row g-4">
+      
+      <div class="row g-4 mb-5">
         <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="100">
-          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+          <div class="about-card h-100 p-4 text-center shadow-lg rounded-4">
             <div class="feature-icon mb-3">
               <div class="icon-circle icon-hover-scale">📅</div>
             </div>
-            <h4 class="mb-3 feature-title">View Schedule</h4>
-            <p class="mb-4 feature-text">Check your flex periods, available time slots, and plan your day effectively.</p>
-            <a href="schedule.html" class="btn btn-primary feature-btn">View Schedule</a>
+            <h4 class="mb-3 feature-title">Schedule Management</h4>
+            <p class="feature-text">Effortlessly view and manage your flex periods, track available time slots, and optimize your daily schedule for maximum productivity.</p>
           </div>
         </div>
         <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="300">
-          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+          <div class="about-card h-100 p-4 text-center shadow-lg rounded-4">
             <div class="feature-icon mb-3">
               <div class="icon-circle icon-hover-scale">👨‍🏫</div>
             </div>
-            <h4 class="mb-3 feature-title">Sign Up for Tutoring</h4>
-            <p class="mb-4 feature-text">Get help from teachers and peer tutors. Book your sessions easily online.</p>
-            <a href="tutoring.html" class="btn btn-primary feature-btn">Sign Up</a>
+            <h4 class="mb-3 feature-title">Academic Support</h4>
+            <p class="feature-text">Connect with qualified teachers and peer tutors, book personalized sessions, and get the academic help you need to succeed.</p>
           </div>
         </div>
         <div class="col-md-4" data-aos="flip-left" data-aos-duration="900" data-aos-delay="500">
-          <div class="feature-card h-100 p-4 text-center shadow-lg rounded-4">
+          <div class="about-card h-100 p-4 text-center shadow-lg rounded-4">
             <div class="feature-icon mb-3">
               <div class="icon-circle icon-hover-scale">📝</div>
             </div>
-            <h4 class="mb-3 feature-title">Submit Forms</h4>
-            <p class="mb-4 feature-text">Send feedback, requests, or communicate with school administration.</p>
-            <a href="form.html" class="btn btn-primary feature-btn">Submit Form</a>
+            <h4 class="mb-3 feature-title">Communication Hub</h4>
+            <p class="feature-text">Submit forms, share feedback, make requests, and maintain seamless communication with school administration.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <h3 class="display-6 fw-bold mb-4">Why Choose Peak Flex?</h3>
+          <p class="mb-4 info-text">Peak Flex was designed specifically for Peak to Peak Charter School students, understanding the unique needs of our flexible learning environment. Our platform streamlines daily operations and enhances the educational experience.</p>
+          <ul class="list-unstyled info-list">
+            <li class="mb-3">✓ <strong>Intuitive Design:</strong> User-friendly interface designed for students</li>
+            <li class="mb-3">✓ <strong>Real-time Updates:</strong> Always stay informed with live schedule changes</li>
+            <li class="mb-3">✓ <strong>Mobile Optimized:</strong> Access your tools anywhere, anytime</li>
+            <li class="mb-3">✓ <strong>Secure Platform:</strong> Your data is protected with enterprise-level security</li>
+            <li class="mb-3">✓ <strong>24/7 Availability:</strong> Access your resources whenever you need them</li>
+          </ul>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="about-stats p-4 shadow-lg rounded-4 text-center">
+            <h4 class="mb-4">Peak Flex by the Numbers</h4>
+            <div class="stats-grid">
+              <div class="stat-item mb-4">
+                <h3 class="fw-bold text-primary stat-number">500+</h3>
+                <p>Active Students</p>
+              </div>
+              <div class="stat-item mb-4">
+                <h3 class="fw-bold text-primary stat-number">1000+</h3>
+                <p>Tutoring Sessions Booked</p>
+              </div>
+              <div class="stat-item mb-4">
+                <h3 class="fw-bold text-primary stat-number">95%</h3>
+                <p>Student Satisfaction</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary stat-number">24/7</h3>
+                <p>Platform Availability</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Info Section -->
-  <section class="info-section py-5" aria-label="Information">
+  <!-- Final CTA Section -->
+  <section class="final-cta py-5" aria-label="Final Call to Action">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-          <h2 class="display-6 fw-bold mb-4">Streamline Your School Day</h2>
-          <p class="mb-4 info-text">Peak Flex makes it easy to manage your time at Peak to Peak Charter School. Whether you need to check your schedule, get academic support, or communicate with staff, everything is just a click away.</p>
-          <ul class="list-unstyled info-list">
-            <li class="mb-2">✓ Real-time schedule updates</li>
-            <li class="mb-2">✓ Easy tutoring session booking</li>
-            <li class="mb-2">✓ Direct communication with staff</li>
-            <li class="mb-2">✓ Mobile-friendly design</li>
-          </ul>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
-          <div class="info-graphic p-4 shadow-lg rounded-4 text-center">
-            <div class="stats-grid">
-              <div class="stat-item">
-                <h3 class="fw-bold text-primary stat-number">100+</h3>
-                <p>Students Served</p>
-              </div>
-              <div class="stat-item">
-                <h3 class="fw-bold text-primary stat-number">24/7</h3>
-                <p>Access Available</p>
-              </div>
-              <div class="stat-item">
-                <h3 class="fw-bold text-primary stat-number">3</h3>
-                <p>Core Features</p>
-              </div>
-            </div>
-          </div>
+      <div class="row text-center">
+        <div class="col-12" data-aos="zoom-in" data-aos-duration="1000">
+          <h2 class="display-5 fw-bold mb-4">Join the Peak Flex Community</h2>
+          <p class="lead mb-4">Experience the difference that organized, accessible student tools can make in your academic journey.</p>
+          <a href="login.html" class="btn btn-primary btn-lg px-5 py-3 shadow-lg me-3">Login Now</a>
+          <a href="#about" class="btn btn-outline-light btn-lg px-5 py-3 shadow-lg">Learn More</a>
         </div>
       </div>
     </div>
@@ -183,5 +208,3 @@
 
 </body>
 </html>
-
-

@@ -168,7 +168,7 @@ body {
   background-color: #000000;
 }
 
-.feature-card {
+.feature-card, .about-card {
   background-color: rgba(1, 51, 102, 0.15);
   border: 1px solid rgba(1, 51, 102, 0.4);
   border-radius: 20px;
@@ -176,7 +176,7 @@ body {
   box-shadow: 0 0 25px rgba(1, 51, 102, 0.1);
 }
 
-.feature-card:hover {
+.feature-card:hover, .about-card:hover {
   background-color: rgba(1, 51, 102, 0.35);
   border-color: #ffd700;
   transform: translateY(-15px) scale(1.05);
@@ -236,6 +236,195 @@ body {
 /* Info Section */
 .info-section {
   background-color: #013366;
-  color:
-    #ffffff;
+  color: #ffffff;
+}
+
+.info-text {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+.info-list li {
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.info-graphic {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+/* About Section */
+.about-section {
+  background-color: #000000;
+}
+
+.about-stats {
+  background-color: rgba(1, 51, 102, 0.15);
+  border: 1px solid rgba(1, 51, 102, 0.4);
+}
+
+/* CTA Sections */
+.cta-section, .final-cta {
+  background-color: #013366;
+}
+
+.cta-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Login Styles */
+.login-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.login-card {
+  background-color: rgba(1, 51, 102, 0.15);
+  border: 1px solid rgba(1, 51, 102, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.login-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffd700;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-label {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.form-check-label {
+  color: #ffffff;
+}
+
+.login-info {
+  color: #ffffff;
+}
+
+.feature-icon-small {
+  width: 40px;
+  height: 40px;
+  background-color: #013366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Page Headers */
+.page-header {
+  background-color: #013366;
+  color: #ffffff;
+}
+
+/* Form and Info Cards */
+.form-card, .info-card, .schedule-card, .tutoring-form-card {
+  background-color: rgba(1, 51, 102, 0.15);
+  border: 1px solid rgba(1, 51, 102, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(1, 51, 102, 0.1);
+}
+
+/* Table Styles */
+.table-dark {
+  background-color: #013366;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(1, 51, 102, 0.3);
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.8rem;
+  padding: 0.5em 0.75em;
+}
+
+/* Footer */
+.footer {
+  background-color: #013366;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .navbar {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+  
+  body {
+    padding-top: 80px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero graphic styling */
+.hero-graphic {
+  background-color: rgba(1, 51, 102, 0.15);
+  border: 1px solid rgba(1, 51, 102, 0.4);
+}
+
+.hero-graphic-title {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.hero-graphic-text {
+  color: #ddd;
 }
